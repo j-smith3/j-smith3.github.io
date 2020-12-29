@@ -12,7 +12,7 @@
 /*create variables for a new header document fragment*/
 var myHeader=document.createElement("header");	//create a header element
 var myDiv=document.createElement("div");	//create a div element
-myDiv.innerHTML='<a href="index.htm"><img id="logo" src="images/jds_logo.png" alt="Company Logo" title="Evelyn\'s Sweet Cakes" id="logo" /></a>';
+myDiv.innerHTML='<a href="j-smith3.github.io"><img id="logo" src="images/jds_logo.png" alt="Company Logo" title="Evelyn\'s Sweet Cakes" id="logo" /></a>';
 
 var product_link=document.getElementById("Products");
 
