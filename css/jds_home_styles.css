@@ -1,0 +1,131 @@
+/*
+ Name: Justin Smith
+   Course: ITSE 2402
+   Date: 5/3/2019
+   Date updated: 5/3/2019
+   Final Project - Evelyn's Sweet Cakes
+   Description: Style sheet for Evelyn's Sweet Cakes Website. Home Page
+   Filename: jds_home_styles.css
+   
+   
+Color Scheme
+Powder: #c2e0da;
+Peach: #FEDCD2;
+Warm: #DF744A;
+Lemon: #DCB239;   
+Linen: #FAF0E6;
+
+Fonts   
+font-family: 'Arapey', serif;
+font-family: 'Rochester', cursive;      
+*/
+
+
+#cupcake_img img{	/*container for main image*/
+			width:100%;
+			height:100vh;
+			
+		}
+		#cupcake_img{	/*cupcake image*/
+			margin-left:-10px;
+			margin-right:-10px;
+		}
+		#Cupcakes_small, #colorful_cupcakes_small{	/*mobile size images*/
+			display:none;
+		}
+		#about_us{	/*container for about us section*/
+			//position:absolute;	
+			background-color:#FEDCD2;		
+			font-size:2rem;
+			
+		}		
+		#about_us h2{	/*heading for about us section*/
+			font-size:2.25rem;
+			margin:5% 5% 0 5%;
+			font-family: 'Rochester', cursive;  
+		}
+		#about_us p{	/*p for about us section*/
+			padding:20px;
+			margin:0 5% 5% 5%;
+			font-size:1.25rem;
+			font-weight:500;
+			min-height:300px;
+			text-indent:25px;	
+		}
+		#down_arrow{	/*styles for drop down arrow*/
+			font-size:3.5rem;
+			font-weight:400;
+			text-align:center;
+			margin-top:-85px;			
+			transform: rotate(90deg);
+		}		
+		
+		#colorful_cupcakes{ /*the image*/
+			height:600px;
+			width:100%;			
+		}
+		.image_div{	/*image div container*/
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom:-10px;
+		}
+		#extra{	/*second body paragraph*/
+			min-height:60vh;
+			background-color:#c2e0da;			
+			padding-top:3%;
+			width:100%;
+			margin-bottom:-60px;
+		}
+		#extra p{
+			padding:20px;
+			margin:3% 5% 3% 5%;
+			font-size:1.25rem;
+			font-weight:500;
+			padding:10px;
+			text-indent:25px;			
+		}
+		#extra p a{
+			text-decoration:none;
+			color:#DF744A;
+			font-weight:500;
+			font-size:1rem;
+		}
+		#extra p a:hover{
+			font-weight:600;
+		}
+		@media screen and (max-width: 700px){
+			#about_us p, #extra p{
+					font-size:.85rem;
+					padding:10px;					
+			}
+			#extra p a{
+				font-size:.85rem;
+			}
+			#extra p{
+				padding-top:10%;
+			}
+		}
+		@media screen and (max-width: 500px){	/*style rules for smaller devices*/
+			
+			#Cupcakes, #colorful_cupcakes{
+				display:none;
+			}
+			#Cupcakes_small{
+				display:block;
+				width:100%;
+				margin-top:-20px;
+				height:600px;
+			}
+			#down_arrow{
+				display:none;
+			}
+			#colorful_cupcakes_small{
+				height:auto;
+				display:block;
+				width:100%;
+			}			
+			#about_us{
+				padding:30px;
+			}
+		}

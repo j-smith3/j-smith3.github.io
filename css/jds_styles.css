@@ -1,0 +1,365 @@
+/*
+ Name: Justin Smith
+   Course: ITSE 2402
+   Date: 4/13/2019
+   Date updated: 5/4/2019
+   Final Project - Evelyn's Sweet Cakes
+   Description: Style sheet for Evelyn's Sweet Cakes Website. Will cover base styles for all pages
+   Filename: jds_styles.css
+   
+   
+Color Scheme
+Powder: #c2e0da;
+Peach: #FEDCD2;
+Warm: #DF744A;
+Lemon: #DCB239;   
+Linen: #FAF0E6;
+
+Fonts   
+font-family: 'Arapey', serif;
+font-family: 'Rochester', cursive;      
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Arapey|Rochester');
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span,h1, h2, h3,
+h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, cite, 
+em, img, small,strong, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside,
+figure, figcaption, footer, header, 
+menu, nav, section{
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 24px;
+   font-weight:550;
+   font-family: 'Arapey', serif;
+   vertical-align: baseline;
+   list-style:none;
+}
+html{	/*html styles*/
+	
+	background:#FEDCD2;
+	
+}
+body {		/*body styles*/
+	background-color:;
+	width:100%;
+	//width:100vw;
+	margin-top:-10px;
+	//margin-left:-10px;
+	border-radius:;	
+}
+
+#alertbox{		/*styles for the dynamic alert box */
+			text-align:center;
+			font-family: 'Arapey', serif;
+			padding:10px;
+			font-weight:600;
+			background:green;
+		}
+
+
+/*Header Styles including navigation and logo*/
+header, #nav{	/*header and nav section*/
+	position:absolute;
+	z-index:2;
+}
+header{
+	top:5%;
+	left:-25px;
+}
+#nav{
+	top:10%;
+	right:5%;
+}
+#logo{	/*#logo is the image that holds the logo*/
+	float:left;
+	width:400px;
+	height:auto;
+	border:0;
+}
+#nav{		/*navigation area*/
+	float:right;
+	padding:10px;
+	text-decoration:none;
+	color: black;
+
+
+}
+#nav li{			/*navigation list items (links)*/
+	display:inline-block;
+	width:150px;
+	text-align:center;	
+	font-weight:900;
+	letter-spacing:.05rem;
+	
+	
+}
+#nav li >a {
+	text-decoration:none;
+	font-weight:inherit;
+	font-family: 'Arapey', serif;
+	color:inherit;
+}
+
+.dropdown-content a:hover {	/*dropdown-content holds the dropdown items */
+	//background-color: #ddd;	/*change the color when hovered over*/
+}
+#nav li:hover .dropdown-content {/*display hidden content in list */
+  display: block;
+}
+.dropdown-content a {		 /*styles for links */
+  color:black;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 12px 0px 12px 20px;
+  height:50px;
+  font-weight:900;
+  letter-spacing:.05rem;
+
+}
+.dropdown-content {/*dropdown-content holds the dropdown items */
+  display: none;
+  position: absolute;
+  min-width:125px; 
+  z-index: 1;
+  text-align:center;
+}
+li:hover, li a:hover{
+	color:#DCB239; 
+	
+}
+
+#new{
+	height:50px;
+	width:50px;
+	position:absolute;
+	bottom:25px;
+	right:50%;
+	margin:0;
+	
+}
+
+/*media styles for header and nav section*/
+@media screen and (max-width: 1150px){
+	#nav li{
+		width:100px;
+	}
+}
+@media screen and (max-width: 900px){
+	#nav li{
+		width:auto;
+	}	
+}
+@media screen and (max-width: 750px){
+	#nav{
+		position:relative;
+		top:300px;
+		left:15px;
+		clear:both;
+		float:none;
+		margin:auto auto;
+		padding:0;
+	}	
+	#logo{
+		position:relative;
+		float:none;		
+	}
+	header{
+		position:absolute;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		padding:0;
+		margin:0;
+		height:300px;
+	}
+	header div {
+		width:100%;
+		padding:0;
+		margin:auto auto;
+		height:300px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+@media screen and (max-width: 450px){
+	#nav li{
+		font-size:.95rem;
+		width:auto;
+	}
+	#nav{
+		width:100%;
+		left:25px;
+	}
+	.dropdown-content a {
+		font-size:.95rem;
+		width:auto;
+		padding:2px 0px;
+		left:-15px;
+		position:relative;
+	}
+	#new{
+		right:60%;
+	}
+}
+@media screen and (max-width: 385px){
+	#nav li{
+		font-size:.75rem;
+		width:auto;
+	}
+	a{
+		font-size:.75rem;
+	}
+	.dropdown-content a {
+		font-size:.75rem;	
+	}
+	
+}
+@media screen and (max-width: 350px){
+	#nav li{
+		font-size:.70rem;
+		width:auto;
+	}	
+	a{
+		font-size:.70rem;
+	}
+	.dropdown-content a {
+		font-size:.70rem;		
+	}
+}
+/*///////////////END HEADER AND NAV SECTION////////////////////*/
+
+
+
+
+/*.main_content is the section of the page that will hold the related page information */
+.main_content{
+	clear:both;
+	margin-left:-10px;
+	margin-right:-10px;
+}
+/*media rules for main content*/
+@media screen and (max-width: 800px){
+	
+}
+
+
+
+
+
+/*FOOTER STYLES*/
+footer{			/*defines the footer container*/
+	background-color:rgb(240, 240, 240);
+	min-height:300px;
+	padding:10px;
+	width:100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	line-height:1.5rem;
+	font-size:.75rem;
+	font-family: 'Arapey', serif;
+	margin-top:-12px;
+}
+footer * {
+	font-family: 'Arapey', serif;
+	
+}
+footer div, footer div p{	/*sets the inner containers*/
+	font-size:.75rem;
+	font-weight:650;
+	letter-spacing:.05rem;
+	text-align:center;
+	font-family: inherit;
+}
+footer div{
+	flex:1 1 auto;
+	width:30vw;
+	padding:10px;
+	font-family: inherit;
+}
+footer div a{	/*link in footer*/
+	text-decoration:none;
+	font-family: inherit;
+}
+footer div a:hover{	/*link in footer*/
+	text-decoration:none;
+	font-family: inherit;
+	color:#DF744A; 
+}
+#email{		/*email logo*/
+	width:45px;
+	height:auto;
+	top:12px;
+	position:relative;
+	font-family: inherit;
+}
+#date{
+	padding:0; margin:0;
+}
+.sitemap a{
+	color: rgb(120, 128, 140);
+	font-family: inherit;
+}
+.hideThisText{	/*this content helps secure the email from spam attacks*/
+	display:none;
+	
+}
+#contact_info{/*format the email address*/
+	font-family: inherit;
+}
+#phone_num{/*format the phone number*/
+	text-decoration:none;
+	color: black;
+	font-size:inherit;
+	font-family: inherit;
+	line-height:inherit;
+	font-weight:inherit;
+}
+/*media styles for footer section*/
+@media screen and (max-width: 800px){
+	footer div, footer div p{	
+		font-size:.75rem;
+	}
+	.sitemap a{
+		font-size:.75rem;
+	}
+}
+@media screen and (max-width: 450px){
+	footer div, footer div p{	
+		font-size:.45rem;
+	}
+	#email{		/*email logo*/
+	width:35px;
+	height:auto;
+	top:8px;
+	position:relative;
+	}
+	.sitemap a{
+		font-size:.55rem;
+	}
+	.sitemap{
+		width:10vw;
+	}
+}
+
+
+
+

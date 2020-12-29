@@ -1,0 +1,395 @@
+<!--
+ Name: Justin Smith
+   Course: ITSE 2402
+   Date: 4/25/2019
+   Date updated: 5/4/2019
+   Final Project - Evelyn's Sweet Cakes
+   Description: Pricing/Order Form for Evelyn's Sweet Cakes Website
+   Filename: jds_table.htm
+-->
+
+<!DOCTYPE HTML>
+<html >
+
+<head>
+	<title>Pricing</title> 
+	<script src="scripts/jds_header.js"></script>
+	<meta charset="utf-8" />
+	<meta name="description" content="Evelyn's Sweet Cakes, scratch made cupcakes for any occasion">
+	<meta name="keywords" content="pricing, Order Form, purchase, shop, buy">
+	<meta name="author" content="Justin Smith">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">	  
+	<link rel="stylesheet" media="screen" href="css/jds_styles.css"  />
+	<link rel="shortcut icon" href="images/jds_favicon.jpeg" type="image/x-icon">
+	
+	<style>
+		html{
+			background-image:url("images/jds_sprinkles.jpeg");
+			background-position: center; /* Center the image */
+			background-repeat: no-repeat; /* Do not repeat the image */
+			background-size: cover; /* Resize the background image to cover the entire container */
+		}
+		#header_div{
+			height:550px;			
+		}
+		
+		/*pricing table*/
+		#pricing_table{
+			width:50%;
+			height: 400px;
+			margin:auto;
+			background-color:#c2e0da;
+			padding:10px;
+			opacity:.8;
+			font-weight:900;
+			font-family: 'Arapey', serif;
+		}
+		#pricing_div h2{
+			font-size:1.5rem;
+		}
+		#table_headings{
+			text-align:left;
+		}
+		#pricing_div{
+			width:75%;
+			background-color:#c2e0da;
+			margin:auto;
+			//float:left;
+			opacity:.8;		
+		}
+		#pricing_table tr, #pricing_table td, #pricing_table th {
+			font-weight:900;
+			font-family: 'Arapey', serif;
+		}
+		/*end pricing table*/
+		
+
+		
+		h2{
+			text-align:center;
+			font-family: 'Rochester', cursive; 
+			font-size:1.25rem;
+			font-weight:600;
+		}
+		#order_details_div{
+			display:none;
+			clear:right;
+			float:right;
+			width:40%;
+			min-height:300px;
+			margin:10% 5%;
+			//border:1px solid black;
+			background-color:#FEDCD2;
+			opacity:.8;
+			padding:10px;
+			font-family: 'Arapey', serif;
+			
+		}
+		#order_details_div p{
+			padding:10px;
+			margin:auto;
+			font-size:1rem;
+			font-family: 'Arapey', serif;
+			font-weight:600;
+		}
+		#order_details_div li{
+			padding:10px;
+			margin:auto;
+			font-size:1rem;
+			font-family: 'Arapey', serif;
+			font-weight:600;
+		}
+		#order_details_div ul:nth-of-type(1){
+			clear:left;
+			float:left;
+			list-style-type:disc;
+		}
+		#order_details_div ul:nth-of-type(2){
+			clear:right;
+			float:right;
+		}
+		#order_details_div p{
+			padding-top:15%;
+			clear:both;
+		}
+		#order_details_div li:hover{
+			color:inherit;
+		}
+		
+		
+		/*form styles*/
+		#order_form{
+			width:40%;
+			min-height:55vh;
+			margin:10% 5%;
+			background-color:#FEDCD2;
+			opacity:.8;
+			z-index:2;
+			float:left;	
+			padding:10px;
+			font-family: 'Arapey', serif;	
+			position:relative;							
+		}
+		.form-row1{	/*each row of the form*/
+			display:flex;
+			width:100%;
+			  
+		}
+		.form-row1 label{	/*form label styles*/
+			flex:1 1 auto;
+			width:20%;
+			padding:10px;
+			text-align:right;
+			font-family: 'Rochester', cursive;
+			font-size:.9rem;
+			font-weight:600;
+		
+		}
+		.form-row1 select{		/*form select styles*/
+			flex:1 1 auto;
+			width:70%;
+			padding:10px;
+			margin:auto;
+			font-size:.9rem;
+			font-family: 'Arapey', serif;
+			font-weight:600;
+		}
+		.form-row1 option{
+			text-align:center;
+			font-family: 'Arapey', serif;
+			font-weight:600;			
+			
+		}
+		.form-row1 textarea{
+			flex:1 1 auto;
+			width:70%;
+			padding:10px;
+			margin-top:20px;
+		}
+		#button1{	/*button containers styles*/
+			position:absolute;
+			bottom:10px;
+			left:40%;			
+		}
+		button{	/*button styles*/
+			height:45px;
+			background:#DCB239;
+			border:2px solid #DF744A;
+			border-radius:7px;
+			font-family: 'Arapey', serif;
+			font-weight:700;
+			font-size:.75rem;
+		}
+		button:hover{
+			box-shadow:2px 2px 15px 2px #DF744A; 
+		}
+		#errorBox{
+			text-align:center;
+			color:#DF744A;
+			font-family:inherit;
+			padding-bottom:15px;
+		}
+		/*end form styles*/ 
+	
+		@media screen and (max-width:1350px){`
+			#pricing_table{
+				width:100%;
+				
+			}
+			#pricing_div{
+				width:90%;
+			}
+			.form-row1 label, .form-row1 select, #order_details_div p, .form-row1 option{
+				font-size:.85rem;
+			}
+		}
+		@media screen and (max-width:1050px){
+			#order_form{
+				width:90%;
+				float:none;
+				margin:40px auto;
+			}
+			#order_details_div{
+				width:90%;
+				float:none;
+				margin:40px auto;
+			}
+			button{	/*button styles*/
+				height:auto;
+				
+			}
+		}
+		
+	</style>
+	
+</head>
+
+<body>	
+	<nav id="nav">
+		<ul>		 
+			<li>Cupcakes
+				<div class="dropdown-content">
+					<a href="jds_flavors.htm" title="Flavors">Flavors</a>
+					<a href="jds_table.htm" title="Pricing">Pricing</a>
+					<a href="jds_form.htm" title="Order">Order</a>
+				</div>
+			</li>
+			<li >
+				<a href="jds_location.htm" title="Location">Location</a>
+				<img src="images/jds_new.png" alt="New Label" title="New Label" id="new"/>
+			</li>
+			<li>
+				<a href="jds_catering.htm" title="Catering">Catering</a>				
+			</li>	
+			<li>Resources
+				<div class="dropdown-content">
+					<a href="jds_links.htm" title="Additional Links">Links</a>
+					<a href="jds_aup.htm" title="Acceptable Use Policy">AUP</a><a href="jds_design.htm" target="_blank" title="Document Design">Design</a>					
+					<a href="https://www.tccd.edu/" target="_blank" title="TCC District Page">TCC District</a>			
+			</li>
+		</ul>		
+	</nav>
+	
+	<div style="width:100%;" id="header_div">
+		
+	<!--div that has nav and logo floated over it-->
+	</div>
+	
+	
+	
+	
+	<div class="main_content" name="main_content" >
+	
+		<div id="pricing_div">
+			<h2>Pricing</h2><hr style="width:95%">
+			<table id="pricing_table">
+					<tr id="table_headings" class="headings" >
+						<th>Size</th>
+						<th>Single</th>
+						<th>Half Dozen</th>
+						<th>Dozen</th>
+						<th>Two-Dozen</th>
+						
+					</tr>				
+					<tr>
+						<td class="headings">Regular</td>
+						<td>&#36;3.00</td>
+						<td>&#36;18.00</td>
+						<td>&#36;30.00</td>
+						<td>&#36;50.00</td>
+						
+					</tr>
+					<tr>
+						<td class="headings">Jumbo</td>
+						<td>&#36;3.50</td>
+						<td>&#36;20.00</td>
+						<td>&#36;36.00</td>
+						<td>&#36;56.00</td>					
+					</tr>
+					<tr>
+						<td class="headings">Mini</td>
+						<td>&#36;2.00</td>
+						<td>&#36;10.00</td>
+						<td>&#36;18.00</td>
+						<td>&#36;36.00</td>
+					</tr>				
+			</table>
+		</div>	
+	
+		<form name="order_form" id="order_form" onSubmit="return false" autocomplete="on">
+				<h2 >Cupcake Order Form</h2><hr>					
+				<fieldset id="order_info">	
+					<div class="form-row1">
+						<label for="size"><abbr>&#42; </abbr>Cupcake Size</label>
+						<select id="size-select" name="select" >
+							<option value="-1">--Please choose an option--</option>
+							<option value="Regular">Regular</option>
+							<option value="Mini">Mini</option>
+							<option value="Jumbo">Jumbo</option>
+						</select>
+					</div>	
+					<div class="form-row1">
+						<label for="quantity"><abbr>&#42; </abbr>Quantity</label>
+						<select id="quantity-select" name="select" >
+							<option value="-1">--Please choose an option--</option>
+							<option value="Half">Half Dozen</option>
+							<option value="One">One Dozen</option>
+							<option value="Two">Two Dozen</option>
+						</select>
+					</div>
+					<div class="form-row1">
+						<label for="cupcake_flavor"><abbr>&#42; </abbr>Cupcake Flavor</label>
+						<select id="flavor_select" name="select" >
+							<option value="-1">--Please choose an option--</option>
+							<option value="Tall Dark and Handsome">Tall Dark and Handsome</option>
+							<option value="Strawberry Delight">Strawberry Delight</option>
+							<option value="Carrot">Carrot</option>
+							<option value="Lemon">Lemon</option>
+							<option value="Wedding Cake">Wedding Cake</option>
+							<option value="Red Velvet">Red Velvet</option>
+							<option value="Birthday Surprise">Birthday Surprise</option>
+							<option value="Miss Unicorn">Miss Unicorn</option>
+							<option value="Peanut Butter">Peanut Butter</option>
+							<option value="Crème Brûlée">Crème Brûlée</option>
+							<option value="Toasted Coconut">Toasted Coconut</option>
+							<option value="Bahama Mama">Bahama Mama</option>
+						</select>						
+					</div>	
+					<div class="form-row1">
+						<label for="comments">Additional Comments</label>
+						<textarea rows="2" cols="20" wrap="soft" style="height:150px"  size="50" maxlength="450" placeholder="For any additional comments, or to custom request a mixed dozen with two flavors, leave us a comment."></textarea>
+					</div>					
+					<div id="button1">
+						<button id="addBtn" name="addBtn" type="submit" >Add to Order</button>					
+					</div>
+				</fieldset>				
+			</form>	
+
+			<div id="order_details_div">	
+				<h2>Order Details</h2><hr>
+				<ul style="list-style-type:disc;" id="order_details"></ul>
+				<ul id="price_area"></ul>
+				<p id="total"></p>
+				<button id="submit_order" name="submit" type="submit" >Submit Order</button> 
+				<button id="reset_order" name="reset" type="reset" >Clear
+				Order</button> 
+			</div>		
+	</div>
+	
+	
+	
+	
+	<hr style="clear:both;" noshade>
+			
+	<footer>
+		<div class="sitemap">
+			
+			<a href="index.htm" title="About Us">About Us</a><br/>
+			<a href="jds_flavors.htm" title="Flavors">Flavors</a><br/>
+			<a href="jds_table.htm" title="Pricing">Pricing</a><br/>			
+			<a href="jds_form.htm" title="Order Form">Order Form</a><br/>
+			<a href="jds_catering.htm" title="Catering">Catering</a><br/>			
+		</div>
+		<div id="contact_info">
+			<p>
+				<a href="mailto:EvelynSweetCakes@gmail.com" ><img id="email" src="images/jds_email.png" alt="email symbol and button" title="Email Us" /></a><br/> 
+				Evelyn<span class="hideThisText">Gibberish</span>SweetCakes@gmail.com<br/>
+				<a href="tel:+18171234567" id="phone_num" title="Call for Questions or Orders">(817) 123-4567</a><br/>
+				&copy;Evelyn's Sweet Cakes | Last Updated: 5/4/2019
+			</p>
+			<p id="date"></p>
+		</div>
+		<div class="sitemap">			
+			<a href="jds_location.htm" title="Locations">Locations</a><br/>
+			<a href="jds_aup.htm" title="Acceptable Use Policy">AUP</a><br/>
+			<a href="jds_links.htm" title="Additional Links"> Links</a><br/>
+			<a href="https://www.tccd.edu/" target="_blank" title="TCC District Page">TCC District</a><br/>
+			<a href="jds_design.htm" target="_blank" title="Document Design">Document Design</a>
+		</div>
+	</footer>
+	
+	<script src="scripts/jds_order.js"></script>
+	<script src="scripts/jds_time.js"></script>
+</body>
+
+</html>

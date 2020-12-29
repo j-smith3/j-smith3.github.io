@@ -1,0 +1,299 @@
+<!--
+ Name: Justin Smith
+   Course: ITSE 2402
+   Date: 4/30/2019
+   Date updated: 5/4/2019
+   Final Project - Evelyn's Sweet Cakes
+   Description: Catering Page for Evelyn’s Sweet Cakes Website
+   Filename: jds_catering.htm
+-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Catering</title> 
+	<script src="scripts/jds_header.js"></script>
+	<meta charset="utf-8" />
+	<meta name="description" content="Evelyn's Sweet Cakes, scratch made cupcakes for any occasion">
+	<meta name="keywords" content="catering, events, parties">
+	<meta name="author" content="Justin Smith">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">	  
+	<link rel="stylesheet" media="screen" href="css/jds_styles.css"  />
+	<link rel="shortcut icon" href="images/jds_favicon.jpeg" type="image/x-icon">
+
+	
+	<style>
+		.main_content{
+			margin:0;
+			margin-bottom:10vh;
+			min-height:100vh;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap:wrap;
+		}
+		#header_div{
+			min-height:625px;
+		}
+		#header_image{
+			width:100%;
+			height:600px;
+		}
+		#header_image_small{
+			display:none;
+		}
+		#horizontal_line{
+			width: 95vw;
+			height: 15px;
+			border-bottom: 1px solid black;
+			border-top:1px solid black;
+			text-align: center;
+			margin-bottom:60px;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		span{
+			font-size: 1.5rem;
+			background-color:#FEDCD2;
+			position:relative;
+			bottom:20px;
+			padding:0px 15px;
+			font-family: 'Rochester', cursive;
+			font-weight:700;
+			letter-spacing:.15rem;
+		}
+		
+		
+		
+		
+		.img_div, .content_div{
+			flex:1 1 auto;
+			width:35%;
+			height:55vh;
+			
+		}
+		.content_div {
+			padding:20px;
+			text-align:center;
+			background-color:#FAF0E6;
+			transparent:.6;
+			padding:5% 0;
+			
+		}
+		.img_div img{
+			width:100%;
+			height:55vh;
+		}
+		.content_div h3{
+			font-family: 'Rochester', cursive;    
+			padding:10px;
+			font-weight:600;
+			font-size:1.25rem;
+		}
+		.content_div p{
+			padding:20px;
+			text-indent:50px;
+			
+		}
+		
+		#phone_num{			
+			font-weight:600;
+			color:#DF744A;
+			font-size:1.1rem;
+		}
+		#phone_num:hover{	
+			color:#DCB239;   
+
+		}
+		#nav li, #nav li a {
+			color:#FAF0E6;
+		}
+		#nav li:hover, #nav li a:hover {
+			color:#DCB239;
+		}
+		@media screen and (max-width:950px){
+			.img_div img{
+				transform:scale(1,.75);
+				width:100%;
+			}
+			.content_div{
+				height:41.5vh;
+			}
+		@media screen and (max-width:750px){
+			.main_content{
+				display:block;
+				margin:auto;
+			}
+			.img_div, .content_div{
+				width:90%;
+				margin:auto;
+			}
+			.img_div img{
+				transform:scale(1,.75);
+			}
+		}
+		@media screen and (max-width:600px){
+			#header_image{
+					display:none;
+			}
+			#header_image_small{
+					display:block;
+					height:70vh;
+					width:auto;
+					max-width:100%;
+			}
+			#phone_num {
+				font-size:.75rem;
+			}
+			.content_div h3{
+				font-size:1rem;
+			}
+			.content_div p{
+				text-indent:15px;
+				font-size:.75rem;
+			}
+		}
+		@media screen and (max-width:500px){
+			#header_div{
+				min-height:73vh;
+			}
+			#header_image_small{				
+					height:70vh;
+					width:100%;
+			}
+		}
+		@media screen and (max-width:350px){
+			#header_div{
+				min-height:55vh;
+			}
+			#header_image_small{				
+					height:50vh;
+					width:100%;
+			}
+		}
+		
+		
+	</style>
+	
+</head>
+
+<body>	
+	<nav id="nav">
+		<ul>		 
+			<li>Cupcakes
+				<div class="dropdown-content">
+					<a href="jds_flavors.htm" title="Flavors">Flavors</a>
+					<a href="jds_table.htm" title="Pricing">Pricing</a>
+					<a href="jds_form.htm" title="Order">Order</a>
+				</div>
+			</li>
+			<li >
+				<a href="jds_location.htm" title="Location">Location</a>
+				<img src="images/jds_new.png" alt="New Label" title="New Label" id="new"/>
+			</li>
+			<li>
+				<a href="jds_catering.htm" title="Catering">Catering</a>				
+			</li>	
+			<li>Resources
+				<div class="dropdown-content">
+					<a href="jds_links.htm" title="Additional Links">Links</a>
+					<a href="jds_aup.htm" title="Acceptable Use Policy">AUP</a><a href="jds_design.htm" target="_blank" title="Document Design">Design</a>					
+					<a href="https://www.tccd.edu/" target="_blank" title="TCC District Page">TCC District</a>			
+			</li>
+		</ul>		
+	</nav>
+
+
+
+	<div style="width:100%;" id="header_div">
+		<img src="images/jds_chocolate.jpeg" id="header_image" alt="Chocolate Cupcakes" title="Chocolate Cupcakes" />
+		<img src="images/jds_chocolate_small.jpeg" alt="Chocolate Cupcakes" title="Chocolate Cupcake" id="header_image_small" />
+	<!-- div that has nav and logo floated over it-->
+	</div>
+	
+	<div id="horizontal_line" >
+		<span>Catering</span>
+	</div>
+	
+	<div class="main_content" name="main_content" >
+		<div class="content_div" >
+			<h3>Celebrate with Cupcakes</h3>
+			<p>
+			Evelyn’s Sweet Cakes creates memorable cupcakes for the special events in life. For more information or to inquire about special events or large volume orders, please contact our catering managers.
+			</p>
+			<a href="tel:+18171234567" id="phone_num" title="Call for Questions or Orders">(817) 123-4567</a>
+		</div>
+		
+		<div  class="img_div" id="red">
+			<img src="images/jds_red_velvet.jpg" alt="Red Velvet Cupcakes" title="Red Velvet Cupcakes"/>
+		</div>
+		
+		<div class="img_div">
+			<img src="images/jds_celebrate.jpeg" alt="Celebration" title="Celebration" />
+		</div>
+		
+		<div class="content_div"	>
+			<h3>Weddings</h3>
+			<p>
+				Sweeten your wedding day with Evelyn’s Sweet Cakes! From flavors that are timeless classics to custom assortments with personalized monograms, decorations, and cupcake display options, we offer endless possibilities to celebrate your special day.
+			</p>
+		</div>
+		
+		<div class="content_div" >
+			<h3>Special Occasions</h3>
+			<p>
+				Our cupcakes are the perfect way to celebrate all of life’s special moments! From baby showers to birthdays, to anniversaries and family reunions, we offer fun and creative assortments and custom decorations for any occasion.
+			</p>
+		</div>
+		
+		<div  class="img_div">
+			<img src="images/jds_swirl.jpeg" alt="Swirl Cupcakes" title="Swirl Cupcakes"/>
+		</div>
+		
+		<div class="img_div">
+			<img src="images/jds_holiday.jpg" alt="Holiday Globes" title="Holiday Globes"/>
+		</div>
+		
+		<div class="content_div">
+			<h3>Holidays</h3>
+			<p>
+				Celebrate the holidays with our cupcakes! From unique fondant decorations to special holiday-themed assortments, Evelyn’s Sweet Cakes offers countless ways to make your holiday gathering truly memorable.
+			</p>
+		</div>
+		
+	</div>
+	
+	
+	<hr noshade>
+	<footer>
+		<div class="sitemap">
+			
+			<a href="index.htm" title="About Us">About Us</a><br/>
+			<a href="jds_flavors.htm" title="Flavors">Flavors</a><br/>
+			<a href="jds_table.htm" title="Pricing">Pricing</a><br/>			
+			<a href="jds_form.htm" title="Order Form">Order Form</a><br/>
+			<a href="jds_catering.htm" title="Catering">Catering</a><br/>			
+		</div>
+		<div id="contact_info">
+			<p>
+				<a href="mailto:EvelynSweetCakes@gmail.com" ><img id="email" src="images/jds_email.png" alt="email symbol and button" title="Email Us" /></a><br/> 
+				Evelyn<span class="hideThisText">Gibberish</span>SweetCakes@gmail.com<br/>
+				<a href="tel:+18171234567" id="phone_num" title="Call for Questions or Orders">(817) 123-4567</a><br/>
+				&copy;Evelyn's Sweet Cakes | Last Updated: 5/4/2019
+			</p>
+			<p id="date"></p>
+		</div>
+		<div class="sitemap">			
+			<a href="jds_location.htm" title="Locations">Locations</a><br/>
+			<a href="jds_aup.htm" title="Acceptable Use Policy">AUP</a><br/>
+			<a href="jds_links.htm" title="Additional Links"> Links</a><br/>
+			<a href="https://www.tccd.edu/" target="_blank" title="TCC District Page">TCC District</a><br/>
+			<a href="jds_design.htm" target="_blank" title="Document Design">Document Design</a>
+		</div>
+	</footer>
+	
+	<script src="scripts/jds_time.js"></script>
+</body>
+
+</html>

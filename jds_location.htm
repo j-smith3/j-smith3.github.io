@@ -1,0 +1,359 @@
+<!--
+ Name: Justin Smith
+   Course: ITSE 2402
+   Date: 5/01/2019
+   Date updated:	5/4/2019
+   Final Project - Evelyn's Sweet Cakes
+   Description: Location Page for Evelyn’s Sweet Cakes Website
+   Filename: jds_location.htm
+-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Location and Hours</title> 
+	<script src="scripts/jds_header.js"></script>
+	<meta charset="utf-8" />
+	<meta name="description" content="Evelyn's Sweet Cakes, scratch made cupcakes for any occasion">
+	<meta name="keywords" content="store location, store hours, maps, address, visit">
+	<meta name="author" content="Justin Smith">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">	  
+	<link rel="stylesheet" media="screen" href="css/jds_styles.css"  />
+	<link rel="shortcut icon" href="images/jds_favicon.jpeg" type="image/x-icon">
+
+	
+	<style>
+		.main_content{
+			margin:0;
+			min-height:100vh;
+			
+		}
+		#header_div{
+			min-height:625px;
+		}
+		#header_image{
+			width:100%;
+			height:600px;
+		}
+		#header_image_small{
+			display:none;
+		}
+		#horizontal_line{
+			width: 95vw;
+			height: 15px;
+			border-bottom: 1px solid black;
+			border-top:1px solid black;
+			text-align: center;
+			margin-bottom:60px;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		span{
+			font-size: 1.5rem;
+			background-color:#FEDCD2;
+			position:relative;
+			bottom:20px;
+			padding:0px 15px;
+			font-family: 'Rochester', cursive;
+			font-weight:700;
+			letter-spacing:.15rem;
+		}
+		
+		
+		
+		#store_location_div{			
+			text-align:center;
+			min-height:40vh;
+			margin:auto;
+			
+		}	
+		#store_location_div p{				
+			width:100%;		
+			padding:3% 10px 4% 10px;
+		}
+		#address_digits{
+			font-size: 1.1rem;
+			position:relative;
+			bottom:0;
+			padding:0px;
+			font-family:inherit;
+			font-weight:700;
+			letter-spacing:.15rem;
+		}
+		#phone_num{			
+			font-weight:600;
+			color:#DF744A;
+			font-size:1rem;
+		}
+		#phone_num:hover{	
+			color:#DCB239;   
+		}
+		ol{			
+			width:100%;
+		}
+		ol li{
+			display:inline-block;
+			width:10%;
+		}
+		ol li:hover{
+			color:inherit;
+		}
+		ol li hr{
+			width:50%;
+			height: 1px;
+			color: #DF744A;
+			background-color: #DF744A;
+			border: none;
+			margin-bottom:0px;
+			margin-top:2px;
+		}
+		ol li{
+			font-family: 'Rochester', cursive;
+			font-weight:500;
+		}
+		
+		
+		
+		#map_div{
+			min-height:40vh;			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		
+		}	
+
+
+
+		
+		#clock_div{
+			text-align:center;
+			min-height:40vh;
+			margin:auto;
+		}
+		#clock_div p{				
+			width:100%;		
+			padding:5% 10px;
+		}
+		
+		
+		
+		
+		@media screen and (max-width:1000px){
+			ol li{
+				width:13%;
+			}
+		
+		}
+		@media screen and (max-width:750px){
+			#store_location_div div{
+				display: flex;
+			}
+			ol li hr{
+				display:none;
+			}
+			ol li{
+				display:block;				
+			}
+			ol{
+				margin:0;
+				padding:0;
+				height:22vh;
+			}
+			ol:first-of-type{
+				flex:1 1 auto;
+				width:50%;
+				margin:0;
+				padding:0;
+				text-align:right;
+				padding-right:15px;
+			}
+			ol:last-of-type {
+				flex:1 1 auto;
+				width:50%;
+				margin:0;
+				padding:0;
+				text-align:left;
+				padding-left:15px;
+			}
+			ol li{
+				width:100%;
+			}
+		}
+		
+		@media screen and (max-width:600px){
+			#header_div{
+				min-height:73vh;
+			}
+			#header_image{
+					display:none;
+			}
+			#header_image_small{
+					display:block;
+					height:70vh;
+					width:100%;
+			}	
+			#map_div{
+				max-width:100%;
+				margin: 0;
+				padding:0;
+				overflow:hidden;
+			}
+			#map_div iframe{
+				transform:scale(.75,.75);
+				max-width:100%;
+			}
+			span:first-of-type{
+				font-size:1rem;
+				bottom:10px;
+			}
+			span:last-of-type{
+				font-size:1rem;
+			}						
+		}
+		@media screen and (max-width:500px){
+			#header_div{
+				min-height:73vh;
+			}
+			#header_image_small{				
+					height:70vh;
+					width:100%;
+			}
+			#clock_div p{				
+				font-size:.85rem;
+			}
+			span:last-of-type{
+				font-size:.75rem;
+			}	
+			span:first-of-type{
+				font-size:1rem;
+				
+			}
+		}
+		@media screen and (max-width:350px){
+			#header_div{
+				min-height:55vh;
+			}
+			#header_image_small{				
+					height:50vh;
+					width:100%;
+			}
+			#map_div iframe{
+				transform:scale(.65,.65);
+			}
+			
+		}
+	</style>
+	
+</head>
+
+<body>	
+	<nav id="nav">
+		<ul>		 
+			<li>Cupcakes
+				<div class="dropdown-content">
+					<a href="jds_flavors.htm" title="Flavors">Flavors</a>
+					<a href="jds_table.htm" title="Pricing">Pricing</a>
+					<a href="jds_form.htm" title="Order">Order</a>
+				</div>
+			</li>
+			<li >
+				<a href="jds_location.htm" title="Location">Location</a>
+				<img src="images/jds_new.png" alt="New Label" title="New Label" id="new"/>
+			</li>
+			<li>
+				<a href="jds_catering.htm" title="Catering">Catering</a>				
+			</li>	
+			<li>Resources
+				<div class="dropdown-content">
+					<a href="jds_links.htm" title="Additional Links">Links</a>
+					<a href="jds_aup.htm" title="Acceptable Use Policy">AUP</a><a href="jds_design.htm" target="_blank" title="Document Design">Design</a>					
+					<a href="https://www.tccd.edu/" target="_blank" title="TCC District Page">TCC District</a>			
+			</li>
+		</ul>		
+	</nav>
+
+	<div style="width:100%;" id="header_div">
+		<img src="images/jds_decor.jpeg" id="header_image" alt="Decorating Cupcakes" title="Decorating Cupcakes" />
+		<img src="images/jds_decor_small.jpeg" id="header_image_small" alt="Decorating Cupcakes" title="Decorating Cupcakes" />
+	<!-- div that has nav and logo floated over it-->
+	</div>
+	
+	<div id="horizontal_line" >
+		<span>Location and Hours</span>
+	</div>
+	
+	<div class="main_content" name="main_content" >
+		<div id="store_location_div">
+			<p>
+			<span id="address_digits">12540</span> <br/>N. Beach St. Keller, TX 76248<br/>
+			<a href="tel:+18171234567" id="phone_num" title="Call for Questions or Orders">(817) 123-4567</a>		
+			</p>
+			<br/>
+			<div><ol>
+				<li>Sunday<hr></li>
+				<li>Monday<hr></li>
+				<li>Tuesday<hr></li>
+				<li>Wednesday<hr></li>
+				<li>Thursday<hr></li>
+				<li>Friday<hr></li>
+				<li>Saturday<hr></li>				
+			</ol>
+			<ol>
+				<li>Closed</li>
+				<li>7a-6p</li>
+				<li>7a-6p</li>
+				<li>7a-6p</li>
+				<li>7a-6p</li>
+				<li>7a-6p</li>
+				<li>7a-6p</li>				
+			</ol></div>
+		</div>
+		
+		<div id="map_div" >
+			<div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=12540%20north%20beach%20street%20keller%20texas&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+		</div>
+		
+		<div id="clock_div">
+			<p>
+				We have a second location opening in San Antonio and the countdown is under way!
+			</p><br/>
+			<span id="countdown"></span>
+		</div>
+		
+	</div>
+	
+	
+	<hr noshade>
+	<footer>
+		<div class="sitemap">
+			
+			<a href="index.htm" title="About Us">About Us</a><br/>
+			<a href="jds_flavors.htm" title="Flavors">Flavors</a><br/>
+			<a href="jds_table.htm" title="Pricing">Pricing</a><br/>			
+			<a href="jds_form.htm" title="Order Form">Order Form</a><br/>
+			<a href="jds_catering.htm" title="Catering">Catering</a><br/>			
+		</div>
+		<div id="contact_info">
+			<p>
+				<a href="mailto:EvelynSweetCakes@gmail.com" ><img id="email" src="images/jds_email.png" alt="email symbol and button" title="Email Us" /></a><br/> 
+				Evelyn<span class="hideThisText">Gibberish</span>SweetCakes@gmail.com<br/>
+				<a href="tel:+18171234567" id="phone_num" title="Call for Questions or Orders">(817) 123-4567</a><br/>
+				&copy;Evelyn's Sweet Cakes | Last Updated: 5/4/2019
+			</p>
+			<p id="date"></p>
+		</div>
+		<div class="sitemap">			
+			<a href="jds_location.htm" title="Locations">Locations</a><br/>
+			<a href="jds_aup.htm" title="Acceptable Use Policy">AUP</a><br/>
+			<a href="jds_links.htm" title="Additional Links"> Links</a><br/>
+			<a href="https://www.tccd.edu/" target="_blank" title="TCC District Page">TCC District</a><br/>
+			<a href="jds_design.htm" target="_blank" title="Document Design">Document Design</a>
+		</div>
+	</footer>
+	
+	<script src="scripts/jds_time.js"></script>
+	<script src="scripts/jds_myclock.js"></script>
+</body>
+
+</html>

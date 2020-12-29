@@ -1,0 +1,359 @@
+<!--
+ Name: Justin Smith
+   Course: ITSE 2402
+   Date: 4/21/2019
+   Date updated: 5/4/2019
+   Final Project - Evelyn's Sweet Cakes
+   Description: Cupcake Flavor Page for Evelyn's Sweet Cakes Website
+   Filename: jds_flavors.htm
+-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Cupcake Flavors</title> 
+	<script src="scripts/jds_header.js"></script>
+	<meta charset="utf-8" />
+	<meta name="description" content="Evelyn's Sweet Cakes, scratch made cupcakes for any occasion">
+	<meta name="keywords" content="Cupcakes, cupcake flavors, cupcake ingredients, cupcake menu, order menu">
+	<meta name="author" content="Justin Smith">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">	  
+	<link rel="stylesheet" media="screen" href="css/jds_styles.css"  />
+	<link rel="shortcut icon" href="images/jds_favicon.jpeg" type="image/x-icon">
+	
+	
+	<style>
+		#header_div{
+			min-height:625px;
+		}
+		#header_image{
+			width:100%;
+			height:600px;
+		}
+		#header_image_small{
+			display:none;
+		}
+		.main_content{
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			margin:0;
+			flex-wrap:wrap;
+			align-content:space-around;			
+		}
+		.menu_flavors{
+			flex:1 1 auto;
+			width:40%;
+			margin:20px 3%;
+			padding:10px;			
+		}
+		#box{			
+			width:100%;
+			margin:0;
+			padding:0;
+			margin-bottom:75px;
+		}
+		.menu_item{
+			width:40%;
+			margin:20px 3%;		
+			padding:10px;
+			float:left;			
+		}
+		#menu_info{
+			margin:20px 3%;
+			width:40%;
+			//height:400px;
+			padding:10px;
+			float:right;
+			border:5px double #DF744A;
+		}
+		#menu_info p, #menu_info2 p{
+			margin:0;
+		}
+		#menu_info2{
+			display:none;
+		}
+		h2{
+			font-family: 'Rochester', cursive;      
+			font-weight:700;
+			text-align:center;
+			font-size:1.25rem;
+			color:;
+		}
+		p{
+			margin:0;
+			margin-top:-25px;
+			padding:0;
+			font-family: 'Arapey', serif;
+			font-weight:500;
+			text-indent:10%;
+		}
+		#horizontal_line{
+			width: 95vw;
+			height: 15px;
+			border-bottom: 1px solid black;
+			border-top:1px solid black;
+			text-align: center;
+			margin-bottom:60px;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		span{
+			font-size: 1.5rem;
+			background-color:#FEDCD2;
+			position:relative;
+			bottom:20px;
+			padding:0px 15px;
+			font-family: 'Rochester', cursive;
+			font-weight:700;
+			letter-spacing:.15rem;
+		}
+		.menu_ul{
+			padding:10px;
+		}
+		.menu_ul li{
+			list-style:none;
+			padding:10px;
+			text-align:center;
+			font-weight:650;
+		}
+		.menu_ul li a{
+			color:inherit;	
+			font-weight:inherit;			
+		}
+		.menu_ul li a:hover{
+			color:#DCB239;			
+		}		
+		.menu_ul li:hover{
+			color:inherit;			
+		}
+		@media screen and (max-width:450px){
+			.main_content{
+				display:block;
+			}
+			.menu_flavors{
+				width:100%;
+				padding:15px;
+			}
+			p{
+				text-indent:20px;
+			}
+			.menu_item, #menu_info{
+				float:none;
+				width:100%;
+			}
+			#menu_info2{
+				display:block;	
+				width:95%;
+				padding:10px;				
+				border:5px double #DF744A;
+				margin:10px;				
+			}
+			#menu_info{
+				display:none;
+			}
+			#header_image_small{
+				display:block;	
+				width:100%;
+				height:650px;
+			}
+			#header_image{
+				display:none;
+			}	
+			#header_div{
+				min-height:675px;
+				margin-top:-20px;
+			}
+			.menu_ul li a{
+				color:inherit;	
+				font-weight:inherit;			
+			}	
+		}
+		
+		
+		
+	</style>
+	
+</head>
+
+<body>	
+	<nav id="nav">
+		<ul>		 
+			<li>Cupcakes
+				<div class="dropdown-content">
+					<a href="jds_flavors.htm" title="Flavors">Flavors</a>
+					<a href="jds_table.htm" title="Pricing">Pricing</a>
+					<a href="jds_form.htm" title="Order">Order</a>
+				</div>
+			</li>
+			<li >
+				<a href="jds_location.htm" title="Location">Location</a>
+				<img src="images/jds_new.png" alt="New Label" title="New Label" id="new"/>
+			</li>
+			<li>
+				<a href="jds_catering.htm" title="Catering">Catering</a>				
+			</li>	
+			<li>Resources
+				<div class="dropdown-content">
+					<a href="jds_links.htm" title="Additional Links">Links</a>
+					<a href="jds_aup.htm" title="Acceptable Use Policy">AUP</a><a href="jds_design.htm" target="_blank" title="Document Design">Design</a>					
+					<a href="https://www.tccd.edu/" target="_blank" title="TCC District Page">TCC District</a>			
+			</li>
+		</ul>		
+	</nav>
+	
+	<div style="width:100%;" id="header_div">
+		<img src="images/jds_blueberry.jpeg" alt="Blueberry Cupcake" title="Blueberry Cupcake" id="header_image" />
+		<img src="images/jds_blueberry_small.jpeg" alt="Blueberry Cupcake" title="Blueberry Cupcake" id="header_image_small" />
+	<!-- div that has nav and logo floated over it-->
+	</div>
+	
+	<div id="horizontal_line" >
+		<span>Flavors</span>
+	</div>
+	
+	<div class="main_content" name="main_content" >		
+		<div class="menu_flavors">
+			<h2>Tall Dark and Handsome</h2><br />
+			<p>
+				Chocolate cake topped with chocolate fudge frosting.
+			</p>		
+		</div>
+		<div class="menu_flavors">
+			<h2  >Strawberry Delight</h2><br />
+			<p>
+				Orange peel cake baked with seasonal strawberries, topped with our sweet strawberry butter-cream.
+			</p>		
+		</div>
+		<div class="menu_flavors">
+			<h2  >Carrot</h2><br />
+			<p>
+				Grandma’s famous carrot cake with pineapple chunks, topped with vanilla bean cream cheese frosting (with or without walnuts).
+			</p>		
+		</div>
+		<div class="menu_flavors">
+			<h2>Lemon</h2><br />
+			<p>
+				Sweet and tart lemon cake with a refreshing lemon core, topped with our lemon butter-cream.
+			</p>		
+		</div>
+		<div class="menu_flavors">
+			<h2 >Wedding Cake</h2><br />
+			<p>
+				White cake topped with a vanilla bean butter-cream frosting and sprinkled with nonpareils.
+			</p>		
+		</div>
+		<div class="menu_flavors">
+			<h2  >Red Velvet</h2><br />
+			<p>
+				Red velvet cake with a vanilla filling, topped with cream cheese frosting and red sugar crystals.
+			</p>		
+		</div>
+		<div class="menu_flavors">
+			<h2 >Birthday Surprise</h2><br />
+			<p>
+				Confetti cake with butter-cream frosting, rimmed in a mixture of birthday sprinkles.
+			</p>		
+		</div>
+		<div class="menu_flavors">
+			<h2>Miss Unicorn</h2><br />
+			<p>
+				Strawberry cake baked with fresh strawberries, topped with a swirl of multicolored cream cheese frosting.
+			</p>		
+		</div>
+		<div class="menu_flavors">
+			<h2  >Crème Brûlée</h2><br />
+			<p>
+				Vanilla custard layered between a vanilla bean cake, topped with vanilla bean butter-cream frosting and embellished with real torched sugar!
+			</p>		
+		</div>
+		
+		<div class="menu_flavors">
+			<h2  >Toasted Coconut</h2><br />
+			<p >
+				Coconut Cake topped with cream cheese frosting and toasted coconut flakes.
+			</p>		
+		</div>
+		<div id="box">			
+			<div id="menu_info">			
+				<ul class="menu_ul">
+					<li>
+						Cupcakes will be rotated based on seasonal flavors
+					</li>
+					<li>
+						All flavors can be ordered Gluten Free (additional fees will apply)
+					</li>
+					<li>
+						Call now or order online.
+					</li>
+					<li>
+						<a href="tel:+18171234567" id="phone_num" title="Call for Questions or Orders">(817) 123-4567</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="jds_table.htm" title="Order Online Now" >Order Online</a>
+					</li>
+				</ul>				
+			</div>
+			<div class="menu_item" >
+				<h2 >Bahama Mama</h2><br />
+				<p >
+					Pineapple, coconut, orange, and rum flavors filled with pineapple rum mousse, topped with whipped frosting
+				</p>		
+			</div>
+			
+			<div class="menu_item" style="clear:left; ">
+				<h2 >Peanut Butter</h2><br />
+				<p >
+					Chocolate cake with peanut butter cream cheese frosting, topped with crumbled peanut butter cups.
+				</p>		
+			</div>
+			<div id="menu_info2" >			
+				<ul class="menu_ul">
+					<li >
+						Cupcakes will be rotated based on seasonal flavors
+					</li>
+					<li>
+						All flavors can be ordered Gluten Free (additional fees will apply)
+					</li>
+					<li>
+						Call now or order online.
+					</li>
+					<li>
+						<a href="tel:+18171234567" id="phone_num" title="Call for Questions or Orders">(817) 123-4567</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="jds_table.htm" title="Order Online Now">Order Online</a>
+					</li>
+				</ul>		
+			</div>
+		</div>	
+		
+	</div>
+	
+	<hr noshade>
+	<footer>
+		<div class="sitemap">
+			
+			<a href="index.htm" title="About Us">About Us</a><br/>
+			<a href="jds_flavors.htm" title="Flavors">Flavors</a><br/>
+			<a href="jds_table.htm" title="Pricing">Pricing</a><br/>			
+			<a href="jds_form.htm" title="Order Form">Order Form</a><br/>
+			<a href="jds_catering.htm" title="Catering">Catering</a><br/>			
+		</div>
+		<div id="contact_info">
+			<p>
+				<a href="mailto:EvelynSweetCakes@gmail.com" ><img id="email" src="images/jds_email.png" alt="email symbol and button" title="Email Us" /></a><br/> 
+				Evelyn<span class="hideThisText">Gibberish</span>SweetCakes@gmail.com<br/>
+				<a href="tel:+18171234567" id="phone_num" title="Call for Questions or Orders">(817) 123-4567</a><br/>
+				&copy;Evelyn's Sweet Cakes | Last Updated: 5/4/2019
+			</p>
+			<p id="date"></p>
+		</div>
+		<div class="sitemap">			
+			<a href="jds_location.htm" title="Locations">Locations</a><br/>
+			<a href="jds_aup.htm" title="Acceptable Use Policy">AUP</a><br/>
+			<a href="jds_links.htm" title="Additional Links"> Links</a><br/>
+			<a href="https://www.tccd.edu/" target="_blank" title="TCC District Page">TCC District</a><br/>
+			<a href="jds_design.htm" target="_blank" title="Document Design">Document Design</a>
+		</div>
+	</footer>
+	
+	<script src="scripts/jds_time.js"></script>
+</body>
+
+</html>
